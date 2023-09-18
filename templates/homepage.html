@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>responsive job portal </title>
+  <link rel="stylesheet" th:href="@{https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css}">
+<!--  <link rel="stylesheet" th:href="@{https://unpkg.com/swiper@7/swiper-bundle.min.css}" />-->
+  <link rel="stylesheet" th:href="@{/lalit_css/homepage.css}">
+
+  <style>
+    .feature-container {
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      padding-left: 0px;
+      margin-top: 10px;
+    }
+
+    .box-1,
+    .box-2,
+    .box-3,
+    .box-4,
+    .box-5,
+    .box-6 {
+      background-color: rgb(44, 39, 39);
+      color: white;
+      width: 155px;
+      flex-basis: calc(50% - 10px);
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+    }
+
+    .detail {
+      border-radius: 30px;
+      background-color: rgb(91, 91, 204);
+      color: #111111;
+      font-size: 15px;
+    }
+
+    .feature-heading {
+      margin-bottom: 43px;
+      padding-left: 520px;
+      padding-top: 15px;
+      color: rgb(252, 117, 139);
+    }
+
+    .background-video {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      overflow: hidden;
+    }
+
+    .background-video video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .detail:hover {
+      background-color: aqua;
+      color: black;
+    }
+
+    .logo-container {
+      text-align: right;
+    }
+
+    .logo-container img {
+      display: inline-block;
+      margin: 10px;
+    }
+
+    .logo1,
+    .logo2,
+    .logo3 {
+      width: 200px;
+      height: auto;
+      border-radius: 50%;
+    }
+
+    .logo1 {
+      padding-top: 40px;
+    }
+
+    .feature-container {
+      display: flex;
+      justify-content: center;
+    }
+
+    .feature-container .box-1,
+    .feature-container .box-2,
+    .feature-container .box-3,
+    .feature-container .box-4,
+    .feature-container .box-5,
+    .feature-container .box-6 {
+      width: 33.33%;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+
+    .info {
+      font-size: 20px;
+      font-weight: bold;
+      color: blue;
+    }
+
+    .makeflex {
+      margin-left: 200px;
+      margin-top: 20%;
+    }
+  </style>
+
+</head>
+
+<body>
+<!-- header section starts      -->
+<header class="header">
+
+  <a href="#" class="logo"> <span>Kaam</span>Kuro </a>
+
+  <div id="menu-btn" class="fas fa-bars"></div>
+
+  <nav class="navbar">
+    <a href="#home">Home</a>
+    <a th:href="@{/Jobs}">Jobs</a>
+<!--    <a th:href="@{/th-job/create}">Post Job</a>-->
+    <a th:href="@{/employee/profile}">Profile</a>
+  </nav>
+
+</header>
+
+
+<section class="home" id="home">
+
+  <div class="swiper home-slider">
+
+    <div class="swiper-wrapper">
+
+      <div class="swiper-slide slide" style="background: url(/images/home-bg-2.jpg) no-repeat;">
+        <div class="content">
+          <span>Get Job, Post Job</span>
+          <h3>"Ignite your career journey and unlock endless possibilities."</h3>
+          <a href="#" class="btn">get started</a>
+        </div>
+      </div>
+
+<!--      <div class="swiper-slide slide" style="background: url(/images/home-bg-2.jpg) no-repeat;">-->
+<!--        <div class="content">-->
+<!--          <span>Get Job, Post Job</span>-->
+<!--          <h3>"Ignite your career journey and unlock endless possibilities."</h3>-->
+<!--          <a href="#" class="btn">get started</a>-->
+<!--        </div>-->
+<!--      </div>-->
+
+<!--      <div class="swiper-slide slide" style="background: url(/images/home-bg-3.jpg) no-repeat;">-->
+<!--        <div class="content">-->
+<!--          <span>Get Job, Post Job</span>-->
+<!--          <h3>"Ignite your career journey and unlock endless possibilities."</h3>-->
+<!--          <a href="#" class="btn">get started</a>-->
+<!--        </div>-->
+<!--      </div>-->
+
+    </div>
+
+    <div class="swiper-pagination"></div>
+
+  </div>
+</section>
+
+<!-- home section ends -->
+
+<section class="about" id="about">
+
+  <div class="image">
+    <img th:src="@{/images/home-bg-3.jpg}" alt="">
+    <img th:src="@{/images/home-bg-1.jpg}" alt="">
+  </div>
+
+  <div class="content">
+    <span>about us</span>
+    <h3 class="title">Every day is a chance to become better</h3>
+    <p>
+      A job that leads to a wealthy life
+      encompasses fulfilling work that not only
+      generates substantial financial rewards but also provides
+      opportunities for personal growth and impact. It involves
+      leveraging expertise and passion to create value, leading
+      to financial abundance and a sense of purpose that transcends material wealth.</p>
+    <div class="box-container">
+      <div class="box">
+        <h3><i class="fas fa-check"></i>Our Mission</h3>
+        <p>
+          At our job website, our mission is to bridge the gap
+          between talented professionals and life-changing career
+          opportunities. We are committed to facilitating meaningful
+          connections that lead to personal growth, professional advancement,
+          and a fulfilling work life. Through our platform, we strive to empower
+          individuals to reach their full potential and make a positive impact in their chosen fields.</p>
+      </div>
+      <div class="box">
+        <h3><i class="fas fa-check"></i>Who We Are</h3>
+        <p>As a trusted platform, we are dedicated to empowering
+          individuals on their journey towards career advancement and success.
+          We provide a reliable and user-friendly environment where job seekers
+          can explore a wide range of opportunities, access valuable resources,
+          and receive support to enhance their skills and abilities. Our commitment
+          is to foster a community that nurtures talent, encourages growth, and facilitates
+          long-lasting success in the professional sphere.</p>
+      </div>
+      <div class="box">
+        <h3><i class="fas fa-check"></i>Our Commitment</h3>
+        <p>We are committed to enabling personal growth and professional
+          fulfillment for individuals seeking rewarding careers.
+          Our job website offers comprehensive resources, career
+          development tools, and a supportive community to help individuals
+          navigate their career paths, unlock their potential, and achieve
+          their goals. We believe that every individual deserves a fulfilling
+          and meaningful work life, and we are dedicated to providing the necessary
+          tools and opportunities to make that a reality.</p>
+      </div>
+      <div class="box">
+        <h3><i class="fas fa-check"></i>Why Choose Us</h3>
+        <p>When you choose our job website, you are choosing
+          a platform that empowers you to shape your own future.
+          We go beyond just job listings by providing personalized
+          career guidance, skill-building opportunities, and networking
+          avenues to help you expand your horizons and seize new opportunities.
+          With our user-centric approach, we are here to support your career aspirations,
+          foster your professional growth, and empower you to take control of your own success story.</p>
+      </div>
+    </div>
+    <a href="#" class="btn">read more</a>
+  </div>
+
+</section>
+
+<!-- about section ends -->
+
+
+
+<!-- features section starts  -->
+
+<section class="features" id="features">
+
+  <h1 class="heading"> <span>Featured Job</span> </h1>
+
+  <div class="box-container">
+
+    <div class="fet-container">
+      <div class="feature-container">
+        <div class="box-1">
+          <h2 class="design">Designer</h2>
+          <br>
+          <p class="ui">UI/UX Designer</p>
+          <p>Company Name/Job hours</p>
+<!--          <button class="detail">See Details</button>-->
+          <a class="detail" th:href="@{/appyjobs}">Apply</a>
+        </div>
+        <div class="box-2">
+          <h2 class="design">Backend Developer</h2>
+          <br>
+          <p class="ui">UI/UX Designer</p>
+          <p>Company Name/Job hours</p>
+<!--          <button class="detail">See Details</button>-->
+          <a class="detail" th:href="@{/appyjobs}">Apply</a>
+        </div>
+        <div class="box-3">
+          <h2 class="design">Frontend Developer</h2>
+          <br>
+          <p class="ui">UI/UX Designer</p>
+          <p>Company Name/Job hours</p>
+<!--          <button class="detail">See Details</button>-->
+          <a class="detail" th:href="@{/appyjobs}">Apply</a>
+        </div>
+        <div class="box-4">
+          <h2 class="design">AI Expert</h2>
+          <br>
+          <p class="ui">UI/UX Designer</p>
+          <p>Company Name/Job hours</p>
+<!--          <button class="detail">See Details</button>-->
+          <a class="detail" th:href="@{/appyjobs}">Apply</a>
+        </div>
+        <div class="box-5">
+          <h2 class="design">Engineer</h2>
+          <br>
+          <p class="ui">UI/UX Designer</p>
+          <p>Company Name/Job hours</p>
+<!--          <button class="detail">See Details</button>-->
+          <a class="detail" th:href="@{/appyjobs}">Apply</a>
+        </div>
+        <div class="box-6">
+          <h2 class="design">Teacher</h2>
+          <br>
+          <p class="ui">UI/UX Designer</p>
+          <p>Company Name/Job hours</p>
+<!--          <button class="detail">See Details</button>-->
+          <a class="detail" th:href="@{/appyjobs}">Apply</a>
+        </div>
+      </div>
+
+
+    </div>
+  </div>>
+
+</section>
+
+<!-- features section ends -->
+
+
+<!-- trainers section starts  -->
+
+<section class="trainers" id="trainers">
+
+  <h1 class="heading"> <span>expert members</span> </h1>
+
+  <div class="box-container">
+
+    <div class="box">
+      <img th:src="@{/images/suyog.jpg}" alt="">
+      <div class="content">
+        <span>expert member</span>
+        <h3>Suyog Manandhar</h3>
+        <div class="share">
+          <a href="#" class="fab fa-facebook-f"></a>
+          <a href="#" class="fab fa-instagram"></a>
+          <a href="#" class="fab fa-whatsapp"></a>
+          <a href="#" class="fab fa-linkedin"></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="box">
+      <img th:src="@{/images/prasanna.jpg}" alt="">
+      <div class="content">
+        <span>expert member</span>
+        <h3>Prasanna Thapa</h3>
+        <div class="share">
+          <a href="#" class="fab fa-facebook-f"></a>
+          <a href="#" class="fab fa-instagram"></a>
+          <a href="#" class="fab fa-whatsapp"></a>
+          <a href="#" class="fab fa-linkedin"></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="box">
+      <img th:src="@{/images/rishesh.jpg}" alt="">
+      <div class="content">
+        <span>expert member</span>
+        <h3>Paribesh Koju</h3>
+        <div class="share">
+          <a href="#" class="fab fa-facebook-f"></a>
+          <a href="#" class="fab fa-instagram"></a>
+          <a href="#" class="fab fa-whatsapp"></a>
+          <a href="#" class="fab fa-linkedin"></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="box">
+      <img th:src="@{/images/paribesh.png}" alt="">
+      <div class="content">
+        <span>expert member</span>
+        <h3>Rishesh Shrestha</h3>
+        <div class="share">
+          <a href="#" class="fab fa-facebook-f"></a>
+          <a href="#" class="fab fa-instagram"></a>
+          <a href="#" class="fab fa-whatsapp"></a>
+          <a href="#" class="fab fa-linkedin"></a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- trainers section ends -->
+<!-- footer section start-->
+<!-- Site footer -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 col-md-6">
+        <h6>About</h6>
+        <p class="text-justify">KaamKuro.com <i>Job you want </i> "Unlock your career potential with our comprehensive job website, connecting talented professionals with life-changing opportunities."</p>
+      </div>
+
+      <div class="col-xs-6 col-md-3">
+        <h6>Categories</h6>
+        <ul class="footer-links">
+          <li><a href="http://scanfcode.com/category/c-language/">C</a></li>
+          <li><a href="http://scanfcode.com/category/front-end-development/">UI Design</a></li>
+          <li><a href="http://scanfcode.com/category/back-end-development/">PHP</a></li>
+          <li><a href="http://scanfcode.com/category/java-programming-language/">Java</a></li>
+          <li><a href="http://scanfcode.com/category/android/">Android</a></li>
+          <li><a href="http://scanfcode.com/category/templates/">Templates</a></li>
+        </ul>
+      </div>
+
+      <div class="col-xs-6 col-md-3">
+        <h6>Quick Links</h6>
+        <ul class="footer-links">
+          <li><a href="http://scanfcode.com/about/">Home</a></li>
+          <li><a href="http://scanfcode.com/contact/">About</a></li>
+          <li><a href="http://scanfcode.com/contribute-at-scanfcode/">Feature</a></li>
+          <li><a href="http://scanfcode.com/privacy-policy/">Login</a></li>
+          <li><a href="http://scanfcode.com/sitemap/">Sign Up</a></li>
+        </ul>
+      </div>
+    </div>
+    <hr>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 col-sm-6 col-xs-12">
+        <p class="copyright-text">Copyright &copy; 2017 All Rights Reserved by
+          <a href="#">KaamKuro</a>.
+        </p>
+      </div>
+
+<!--      <div class="col-md-4 col-sm-6 col-xs-12">-->
+<!--        <ul class="social-icons">-->
+<!--          <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>-->
+<!--          <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>-->
+<!--          <li><a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a></li>-->
+<!--          <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>-->
+<!--        </ul>-->
+<!--      </div>-->
+    </div>
+  </div>
+</footer>
+
+<!--footer section end-->
+</body>
+
+</html>
